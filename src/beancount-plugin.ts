@@ -35,6 +35,7 @@ export class ObsidianBeancountPlugin
         new Notice('Error: ' + error);
       }
     });
+    this.registerExtensions(['bean', 'beancount', 'ledger'], 'markdown')
   }
 
   private readFile = async (name: string) => {
